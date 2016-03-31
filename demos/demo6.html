@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{margin: 0;padding: 0;}
+        div{position: relative;border: 1px solid bisque}
+
+        ul{position: absolute;left: 20px;top: 20px;border: 1px solid black}
+        li:nth-of-type(1){position: absolute;left: 40px;top: 40px}
+        li:nth-of-type(2){position: absolute;left: 40px;top: 80px}
+        li:nth-of-type(3){position: absolute;left: 40px;top: 120px}
+        li:nth-of-type(4){position: absolute;left: 40px;top: 160px}
+
+        div{width: 500px;height: 500px;}
+        ul{width: 400px;height: 400px;}
+        li{width: 200px;  height: 40px;border: 1px solid blueviolet;margin-left: 20px}
+    </style>
+    <style>
+        #box{width: 100px;height: 100px;background: red}
+        code{
+            position: absolute;
+            right: 0;
+            left: 50%;
+            top: 100px;
+            bottom: 100px;
+        }
+    </style>
+    <script type="text/javascript" src="myQuery.js"></script>
+</head>
+<body>
+<div id="div">
+    <ul class="ul">
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+    </ul>
+</div>
+
+    <code>
+        var pos=$("li").eq(0).offset()<br>
+        console.log(pos)<br>
+        var pos=$("li").eq(1).offset()<br>
+        console.log(pos)<br>
+        var pos=$("li").eq(2).offset()<br>
+        console.log(pos)<br>
+        var pos=$("li").eq(3).offset()<br>
+        console.log(pos)<br>
+
+        console.log('----------------')<br>
+
+        var pos=$("li").eq(0).position()<br>
+        console.log(pos)<br>
+        var pos=$("li").eq(1).position()<br>
+        console.log(pos)<br>
+        var pos=$("li").eq(2).position()<br>
+        console.log(pos)<br>
+        var pos=$("li").eq(3).position()<br>
+        console.log(pos)<br>
+    </code>
+
+</body>
+
+<script>
+
+
+    var pos=$("li").eq(0).offset()
+    console.log(pos)
+    var pos=$("li").eq(1).offset()
+    console.log(pos)
+    var pos=$("li").eq(2).offset()
+    console.log(pos)
+    var pos=$("li").eq(3).offset()
+    console.log(pos)
+
+    console.log('----------------')
+
+    var pos=$("li").eq(0).position()
+    console.log(pos)
+    var pos=$("li").eq(1).position()
+    console.log(pos)
+    var pos=$("li").eq(2).position()
+    console.log(pos)
+    var pos=$("li").eq(3).position()
+    console.log(pos)
+</script>
+
+</html>

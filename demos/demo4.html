@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>zhuhaha.js实例1--事件</title>
+    <script type="text/javascript" src="myQuery.js"></script>
+    <style>
+        #box{width: 100px;height: 100px;background: red}
+        code{
+            position: absolute;
+            right: 0;
+            left: 20%;
+            top: 100px;
+            bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">box1</div>
+<div class="box2">box2</div>
+<div class="box3">box3</div>
+<code>
+    $("div").css({background:"red",width:"100px",height:"100px",'margin':"30px",'color':"#ffffff",'text-align':"center",'lineHeight':"100px",'fontSize':"25px"})
+    <br>
+    //box1 普通点击事件<br>
+    $(".box1").on('click',function(){<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;alert($(this).text())<br>
+    })<br>
+
+    //box2 点击后取消事件<br>
+    $(".box2").on('click',function(){<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;alert($(this).text())<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;$(".box3").trigger("hello")<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;$(this).off("click")<br>
+    })
+
+    //执行自定义事件<br>
+    $(".box3").on("hello",function(){<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;alert("hello box3")<br>
+    })
+</code>
+</body>
+
+<script>
+    //刷新看效果不用写浏览器前缀
+    $("div").css({background:"red",width:"100px",height:"100px",'margin':"30px",'color':"#ffffff",'text-align':"center",'lineHeight':"100px",'fontSize':"25px"})
+
+    //box1 普通点击事件
+    $(".box1").on('click',function(){
+        alert($(this).text())
+    })
+
+    //box2 点击后取消事件
+    $(".box2").on('click',function(){
+        alert($(this).text())
+        $(".box3").trigger("hello")
+        $(this).off("click")
+    })
+
+    //执行自定义事件
+    $(".box3").on("hello",function(){
+        alert("hello box3")
+    })
+
+</script>
+</html>

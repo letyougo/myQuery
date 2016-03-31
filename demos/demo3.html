@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>zhuhaha.js实例1--动画</title>
+    <script type="text/javascript" src="myQuery.js"></script>
+    <style>
+    #box{width: 100px;height: 100px;background: red}
+
+</style>
+</head>
+<body>
+<code>
+    $(".box").css({background:"red",width:"100px",height:"100px"}).animate({"width":"300px"},2000,'elasticBoth')
+</code>
+<div class="box"></div>
+</body>
+
+<script>
+    //刷新看效果不用写浏览器前缀
+    $(".box").css({background:"red",width:"100px",height:"100px"}).animate({"width":"300px"},2000,'elasticBoth')
+</script>
+</html>

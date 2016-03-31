@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>zhuhaha.js实例--表单验证方法</title>
+    <script type="text/javascript" src="myQuery.js"></script>
+    <style>
+        #box{width: 100px;height: 100px;background: red}
+
+    </style>
+</head>
+<body>
+<input type="text" id="phone" value="13999300635"><input type="button" class="phone" value="电话"><br><br>
+
+<input type="text" id="qq" value="313755017"><input type="button" class="qq" value="QQ"><br><br>
+
+<input type="text" id="email" value="313755017@qq.com"><input type="button" class="email" value="邮箱"><br><br>
+<code>
+    $(".phone").on("click",function(){<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;var a=$("#phone").check('phone')<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;a?alert("这是电话号码"):alert("这不是电话号码")<br>
+    })<br>
+
+    $(".qq").on("click",function(){<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;var a=$("#qq").check('qq')<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;a?alert("这是QQ号码"):alert("这不是QQ号码")<br>
+    })<br>
+    $(".email").on("click",function(){<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;var a=$("#email").check('email')<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;a?alert("这是Email号码"):alert("这不是Email号码")<br>
+    })
+</code>
+</body>
+
+
+<script>
+    $(".phone").on("click",function(){
+        var a=$("#phone").check('phone')
+        a?alert("这是电话号码"):alert("这不是电话号码")
+    })
+
+    $(".qq").on("click",function(){
+        var a=$("#qq").check('qq')
+        a?alert("这是QQ号码"):alert("这不是QQ号码")
+    })
+    $(".email").on("click",function(){
+        var a=$("#email").check('email')
+        a?alert("这是Email号码"):alert("这不是Email号码")
+    })
+
+</script>
+</html>

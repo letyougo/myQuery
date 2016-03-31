@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+
+    <style>
+        .box{width: 100px;height: 100px;background: red;margin: 50px}
+    </style>
+    <style>
+        #box{width: 100px;height: 100px;background: red}
+        code{
+            position: absolute;
+            right: 0;
+            left: 30%;
+            top: 100px;
+            bottom: 100px;
+        }
+    </style>
+    <script type="text/javascript" src="myQuery.js"></script>
+</head>
+<body>
+<code>
+    $(".box").on("click",function(){<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;$(this).transition({"width":"400px"},"1s 1s").transitionEnd(function(){alert("hello")})<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;$(this).next().transition({"width":"400px"},"1s 1s")<br>
+    })
+</code>
+
+<div class="box"></div>
+<div class="box"></div><div class="box"></div>
+</body>
+
+<script>
+
+
+    $(".box").on("click",function(){
+        $(this).transition({"width":"400px"},"1s 1s").transitionEnd(function(){alert("hello")})
+        $(this).next().transition({"width":"400px"},"1s 1s")
+    })
+
+
+</script>
+</html>
